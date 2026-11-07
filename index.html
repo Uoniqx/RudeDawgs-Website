@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RUDE DAWGS LLC — Chicago-Style Hot Dogs</title>
+<meta name="description" content="RUDE DAWGS LLC — hand-loaded hot dogs, no apologies. Order ahead, find us, see the menu.">
+
+<!--
+  ============================================================
+  RUDE DAWGS LLC — SITE FILE
+  ============================================================
+  HOW TO ADD REAL PHOTOS
+  Search this file for "PHOTO SLOT" comments. Each one marks a
+  placeholder built from a <div class="photo"> containing a small
+  inline SVG. To drop in a real photo:
+
+    1. Delete the <svg>...</svg> block inside the .photo div.
+    2. Add in its place: <img src="your-photo.jpg" alt="describe the photo">
+    3. Keep the surrounding <div class="photo"> wrapper — it controls
+       the frame, aspect ratio and border.
+
+  Example, before:
+    <div class="photo" style="--ratio:4/3">
+      <svg>...</svg>
+      <span class="photo__label">HERO PHOTO — 1600x1200</span>
+    </div>
+
+  Example, after:
+    <div class="photo" style="--ratio:4/3">
+      <img src="hero-dog.jpg" alt="Loaded Chicago dog on the counter">
+    </div>
+  ============================================================
+  HOW TO SWAP THE LOGO MARK
+  The bulldog badge is a hand-built inline SVG so the site works
+  before real brand art exists. Search for "LOGO MARK" — replace
+  that block with an <img src="logo.svg"> once the client's real
+  logo file is ready. Recommended: SVG or transparent PNG, square,
+  at least 500x500px.
+  ============================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <!-- LOGO MARK (small, nav) -->
+      <img src="images/bulldog-icon-48.png">
+      <span class="brand__word">RUDE DAWGS</span>
+    </a>
+
+    <ul class="navlinks" id="navlinks">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#location">Location</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="navlinks__order"><a class="btn btn--fill" href="#order">Order Ahead</a></li>
+    </ul>
+
+    <div class="nav__cta">
+      <a class="btn btn--line" href="tel:+13035550142">(720) 329-1680</a>
+      <a class="btn btn--fill" href="#order">Order Ahead</a>
+      <button class="navtoggle" id="navtoggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navlinks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============================================================ HERO ============================================================ -->
+  <section class="hero dots-dark">
+    <div class="wrap">
+      <div class="hero__copy">
+        <span class="hero__eyebrow">psst — ask for it loaded</span>
+        <h1>RUDE<span>DAWGS</span></h1>
+        <p class="hero__sub">Snap-cased dogs, real char off the grill, and toppings piled past the point of reason. Nothing here apologizes for itself.</p>
+        <div class="hero__actions">
+          <a class="btn btn--fill" href="#order">Order Ahead</a>
+          <a class="btn btn--line" href="#menu">See the Menu</a>
+        </div>
+      </div>
+      <div class="hero__art">
+        <!-- LOGO MARK (hero, large) -->
+        <img src="images/bulldog-hero-2000.png" alt="">
+        <div class="sticker sticker--one">ALL BEEF<br>NO FILLER</div>
+        <div class="sticker sticker--two">GRILLED<br>FRESH</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave wave--hero-strip dots-dark" aria-hidden="true">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,45 C200,10 400,85 600,45 C800,5 1000,80 1200,45 L1200,120 L0,120 Z"/><path class="wave__mustard" d="M0,78 Q60,58 120,78 T240,78 T360,78 T480,78 T600,78 T720,78 T840,78 T960,78 T1080,78 T1200,78"/></svg>
+  </div>
+
+  <div class="strip stripes" aria-hidden="true">
+    <div class="strip__track" id="stripTrack">
+      <div class="strip__group" id="stripGroupA">
+        <span>ALL BEEF, NO FILLER</span><span>GRILLED TO ORDER</span><span>EST. IN A PARKING LOT</span><span>OWN YOUR TOPPINGS</span>
+      </div>
+      <div class="strip__group" id="stripGroupB">
+        <span>ALL BEEF, NO FILLER</span><span>GRILLED TO ORDER</span><span>EST. IN A PARKING LOT</span><span>OWN YOUR TOPPINGS</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ STORY ============================================================ -->
+  <section class="story">
+    <div class="wrap">
+      <div class="story__copy">
+        <blockquote>We're not here to be polite about it. <span>Good dogs are loud.</span></blockquote>
+        <cite>— the guys running the cart</cite>
+        <p style="margin-top:1.4rem;">RUDE DAWGS started as a folding table and a stubborn grill. It's grown into a cart, a following, and a menu that hasn't gotten soft. Same snap-cased dogs, same short list of toppings done right, same attitude.</p>
+      </div>
+      <!-- PHOTO SLOT: story image, recommend a candid shot of the cart/grill in action -->
+      <div class="photo dots-dark" style="--ratio:5/4">
+        <img src="images/truck.jpg" alt="Hot dog stand food truck outside of a Lowe's">
+      </div>
+    </div>
+  </section>
+
+  <div class="wave wave--story-menu" aria-hidden="true">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,45 C200,10 400,85 600,45 C800,5 1000,80 1200,45 L1200,120 L0,120 Z"/><path class="wave__mustard" d="M0,78 Q60,58 120,78 T240,78 T360,78 T480,78 T600,78 T720,78 T840,78 T960,78 T1080,78 T1200,78"/></svg>
+  </div>
+
+  <!-- ============================================================ MENU ============================================================ -->
+  <section id="menu" class="menu-section dots-paper">
+    <div class="wrap">
+      <div class="section-head on-paper">
+        <div class="rule"></div>
+        <h2>The Menu</h2>
+        <p>Hot dogs. No shortcuts. Ask for it dirty and we'll know what you mean.</p>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-cat">
+          <h3>Dawgs</h3>
+
+          <div class="menu-item">
+            <div>
+              <div class="menu-item__top">
+                <span class="menu-item__name">Big Dawg</span>
+                <span class="menu-item__tag">House Favorite</span>
+              </div>
+              <span class="menu-item__desc">All-beef, mustard, onion, relish, sport peppers, tomato, pickle spear, celery salt.</span>
+            </div>
+            <span class="price-tag">$6.00</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name">Chili Cheese Big Dawg</span>
+              <span class="menu-item__desc">Double dog, cheese sauce, grilled onion, jalapeno, crushed chips.</span>
+            </div>
+            <span class="price-tag">$8.00</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name">Deluxe Chili Cheeseburger</span>
+              <span class="menu-item__desc">Bacon-wrapped, grilled pepper and onion, chipotle mayo.</span>
+            </div>
+            <span class="price-tag">$12.00</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name">BBQ Beff Sandwich</span>
+              <span class="menu-item__desc">All-beef dog, mustard, onion. For purists.</span>
+            </div>
+            <span class="price-tag">$10.00</span>
+          </div>
+        </div>
+
+        <div class="menu-cat">
+          <h3>Sides &amp; Drinks</h3>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name">Cart Fries</span>
+              <span class="menu-item__desc">Hand-cut, char salt.</span>
+            </div>
+            <span class="price-tag">$4.50</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name">Chili Cheese Fries</span>
+              <span class="menu-item__desc">House chili, cheese sauce, onion.</span>
+            </div>
+            <span class="price-tag">$6.50</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name">Bottled Soda</span>
+              <span class="menu-item__desc">Glass bottle, ice cold.</span>
+            </div>
+            <span class="price-tag">$2.75</span>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <span class="menu-item__name">Lemonade</span>
+              <span class="menu-item__desc">Made to order.</span>
+            </div>
+            <span class="price-tag">$4.25</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave wave--menu-gallery dots-paper" aria-hidden="true">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,45 C200,10 400,85 600,45 C800,5 1000,80 1200,45 L1200,120 L0,120 Z"/><path class="wave__mustard" d="M0,78 Q60,58 120,78 T240,78 T360,78 T480,78 T600,78 T720,78 T840,78 T960,78 T1080,78 T1200,78"/></svg>
+  </div>
+
+  <!-- ============================================================ GALLERY ============================================================ -->
+  <section id="gallery">
+    <div class="wrap">
+      <div class="section-head on-dark">
+        <div class="rule"></div>
+        <h2>Gallery</h2>
+        <p>Straight off the grill. Drop in real shots of the food, the cart, and the crowd here.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="photo dots-dark" style="--ratio:4/3">
+          <img src="images/mustard.jpg" alt="Hot dog with mustard">
+        </div>
+        <div class="photo dots-dark" style="--ratio:4/3">
+          <img src="images/quesadilla.jpg" alt="Chicken quesadilla">
+        </div>
+        <div class="photo dots-dark" style="--ratio:1/1">
+          <img src="images/fajitas.jpg" alt="Hot dog with fajitas on top">
+        </div>
+        <div class="photo dots-dark" style="--ratio:1/1">
+          <img src="images/sjoe.jpg" alt="Sloppy joe sandwich">
+        </div>
+        <div class="photo dots-dark" style="--ratio:1/1">
+          <img src="images/tacos.jpg" alt="Taco plate">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ LOCATION ============================================================ -->
+  <section class="location" id="location">
+    <div class="wrap">
+      <div>
+        <div class="rule"></div>
+        <h2 class="on-dark" style="text-transform:uppercase; font-size:clamp(2.1rem,5vw,3.2rem); margin-bottom:1.4rem; color:var(--bone);">Find the Cart</h2>
+        <ul class="hours">
+          <li><span>Mon – Thu</span><span>11:00am – 8:00pm</span></li>
+          <li><span>Fri – Sat</span><span>11:00am – 10:00pm</span></li>
+          <li><span>Sunday</span><span>12:00pm – 6:00pm</span></li>
+        </ul>
+        <div class="addr">
+          <p>24505 E Wheatlands Pkwy, Aurora, CO</p>
+          <p>Right in front of the Lowe's.</p>
+        </div>
+        <div style="margin-top:1.8rem;">
+          <a class="btn btn--fill" href="#order">Order Ahead</a>
+        </div>
+      </div>
+ 
+      <!-- MAP: embedded Google Map for the cart's address. To point this at a
+           different address, edit the text after "q=" in the src URL below
+           (spaces can stay as %20 or plain spaces — browsers handle both). -->
+      <div class="photo" style="--ratio:16/11">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1086.932974299296!2d-104.70336190195047!3d39.59768272296606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c896975b6498b%3A0xbab0728dec059848!2sRUDE%20DAWGS%20LLC!5e0!3m2!1sen!2sus!4v1790056215332!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"> 
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave wave--location-cta" aria-hidden="true">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,45 C200,10 400,85 600,45 C800,5 1000,80 1200,45 L1200,120 L0,120 Z"/><path class="wave__mustard" d="M0,78 Q60,58 120,78 T240,78 T360,78 T480,78 T600,78 T720,78 T840,78 T960,78 T1080,78 T1200,78"/></svg>
+  </div>
+
+  <!-- ============================================================ CTA BAND ============================================================ -->
+  <section class="cta-band stripes" id="order" style="padding-top:2rem;padding-bottom:2rem;">
+    <div class="wrap">
+      <h2>Hungry yet?</h2>
+      <a class="btn btn--dark" href="tel:+13035550142">Call to Order — (720) 329-1680</a>
+    </div>
+  </section>
+
+  <div class="wave wave--cta-footer stripes" aria-hidden="true">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,45 C200,10 400,85 600,45 C800,5 1000,80 1200,45 L1200,120 L0,120 Z"/><path class="wave__mustard" d="M0,78 Q60,58 120,78 T240,78 T360,78 T480,78 T600,78 T720,78 T840,78 T960,78 T1080,78 T1200,78"/></svg>
+  </div>
+
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="-4 -4 248 248" role="img" aria-label="Rude Dawgs bulldog mark">
+            <circle cx="120" cy="120" r="98" fill="#d21f26"/>
+            <polygon points="60,88 30,46 78,68" fill="#131211"/>
+            <polygon points="180,88 210,46 162,68" fill="#131211"/>
+            <polygon points="72,150 62,88 92,58 120,48 148,58 178,88 168,150 148,172 92,172" fill="#131211"/>
+            <polygon points="86,104 102,98 102,111 86,117" fill="#f2ede4"/>
+            <polygon points="154,104 138,98 138,111 154,117" fill="#f2ede4"/>
+            <path d="M90,140 Q120,157 150,140" stroke="#f2ede4" stroke-width="5" fill="none" stroke-linecap="round"/>
+          </svg>
+          <span>RUDE DAWGS</span>
+        </div>
+        <p style="max-width:32ch;">Hand-loaded hot dogs out of Aurora, CO. Cart open daily — see hours above.</p>
+      </div>
+
+      <div>
+        <h4>Site</h4>
+        <ul class="foot-links">
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#location">Location</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <ul class="foot-links">
+          <li><a href="tel:+13035550142">(720) 329-1680</a></li>
+          <li><a href="mailto:hello@rudedawgs.com">hello@rudedawgs.com</a></li>
+          <li><a href="#" aria-label="RUDE DAWGS on Instagram">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>© 2026 RUDE DAWGS LLC. All rights reserved.</span>
+      <span>Aurora, Colorado</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var toggle = document.getElementById('navtoggle');
+    var links = document.getElementById('navlinks');
+    toggle.addEventListener('click', function(){
+      var open = links.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    links.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        links.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+
+  // Marquee strip: keep it filled well past the widest viewport so the
+  // -50% loop never runs out of content (which is what caused the jump),
+  // then time it from the real measured width so speed stays constant.
+  (function(){
+    var track = document.getElementById('stripTrack');
+    var groupA = document.getElementById('stripGroupA');
+    var groupB = document.getElementById('stripGroupB');
+    if(!track || !groupA || !groupB){ return; }
+
+    var PX_PER_SECOND = 55;
+
+    function fillAndTime(){
+      var target = window.innerWidth * 1.25;
+      var guard = 0;
+      while(groupA.scrollWidth < target && guard < 20){
+        var items = Array.prototype.slice.call(groupA.children);
+        items.forEach(function(el){
+          groupA.appendChild(el.cloneNode(true));
+          groupB.appendChild(el.cloneNode(true));
+        });
+        guard++;
+      }
+      var setWidth = groupA.scrollWidth;
+      if(setWidth > 0){
+        track.style.setProperty('--scroll-duration', (setWidth / PX_PER_SECOND) + 's');
+      }
+    }
+
+    fillAndTime();
+    if(document.fonts && document.fonts.ready){
+      document.fonts.ready.then(fillAndTime);
+    } else {
+      window.addEventListener('load', fillAndTime);
+    }
+    var resizeTimer;
+    window.addEventListener('resize', function(){
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(fillAndTime, 200);
+    });
+  })();
+</script>
+
+</body>
+</html>
